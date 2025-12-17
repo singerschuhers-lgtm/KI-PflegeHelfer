@@ -1,0 +1,5 @@
+{
+  "name": "PflegeHelfer",
+  "description": "A bilingual (RU/DE) assistant for elderly patients in Germany, featuring AI consultations about care laws (SGB XI), care service search, and legal information.",
+  "requestFramePermissions": []
+}
