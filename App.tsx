@@ -30,7 +30,9 @@ const AppContent: React.FC = () => {
     <div className="flex flex-col h-screen bg-green-50 overflow-hidden">
       <Header />
       
-      <main className="flex-1 relative w-full max-w-3xl mx-auto">
+      {/* Main container takes remaining space. overflow-hidden prevents body scroll. 
+          flex-col allows children to use flex-1 to fill height. */}
+      <main className="flex-1 relative w-full max-w-3xl mx-auto overflow-hidden flex flex-col">
         {renderView()}
       </main>
       

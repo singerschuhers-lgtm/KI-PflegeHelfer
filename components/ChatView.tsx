@@ -91,7 +91,7 @@ const ChatView: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-140px)]">
+    <div className="flex flex-col h-full">
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-6 pb-4">
         {messages.map((msg) => (
@@ -122,8 +122,8 @@ const ChatView: React.FC = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input Area - Sticky above navbar */}
-      <div className="bg-white p-4 border-t border-green-200">
+      {/* Input Area */}
+      <div className="bg-white p-4 border-t border-green-200 shrink-0">
         <div className="flex gap-2 max-w-3xl mx-auto">
           <input
             type="text"
@@ -143,6 +143,9 @@ const ChatView: React.FC = () => {
           </button>
         </div>
       </div>
+      
+      {/* Spacer for Fixed NavBar (72px) to prevent input from being hidden behind it */}
+      <div className="h-[76px] shrink-0 bg-white sm:bg-transparent"></div>
     </div>
   );
 };
